@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="#" class="logo">E-Com</a>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      <div class="nav-right">
+        <div>
+            <input type="text" class="search-bar" placeholder="Search..."  ><span class="search"><i class="fa fa-search"></i></span>
+        </div>
+        <a href="#" class="nav-icon"><i class="fa fa-shopping-cart"></i>Cart<span class="cart-count">0</span></a>
+        <a href="#" class="nav-icon"><i class="fa fa-user"></i> Login</a>
+      </div>
+      <div class="hamburger">
+        <i class="fa fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="wrapper">
+      <div class="product-box">
+        <div class="all-images">
+          <div class="small-images">
+            <img class="images" src="./images/13.jpg" onclick="clickingimg(this)">
+            <img class="images" src="./images/13 1.jpg" onclick="clickingimg(this)">
+            <img class="images" src="./images/13 2.jpg" onclick="clickingimg(this)">
+            <img class="images" src="./images/13 3.jpg" onclick="clickingimg(this)">
+            <img class="images" src="./images/13 4.jpg" onclick="clickingimg(this)">
+          </div>
+          <div class="main-images">
+            <img src="images/13.jpg" id="imagebox">
+          </div>
+        </div>
+      </div>
+      <div class="text">
+        <div class="content">
+          <p class="brand">Brand : Apple</p>
+          <h2>Apple iPhone 13 (128GB) - Blue</h2>
+          <a href="https://www.apple.com/in/store">visit the apple store</a><br>
+          <div class="review">
+            <span>(4.5)</span>
+            <span class="fa">
+              <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+              <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+              <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+              <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+              <i class="fa-regular fa-star-half-stroke" style="color: #ffd43b"></i>
+            </span>
+          </div>
+          <div class="price-box">
+            <p class="price">
+              <span class="discount">-19%</span> &#8377;48,799
+            </p>
+            <span>M.R.P.:</span><strike>&#8377; 59,900</strike>
+          </div>
+          <p class="colour">
+            Colour :
+            <select name="select colour">
+              <option value="Select colour">select colour</option>
+              <option value="black">black</option>
+              <option value="blue">blue</option>
+              <option value="green">green</option>
+              <option value="red">red</option>
+              <option value="starlight">starlight</option>
+            </select>
+          </p>
+
+          <p>Quantity <input type="text" value="1"></p>
+          <ul class="hidden detailsUl">
+            <li>128 GB ROM</li>
+            <li>15.49 cm (6.1 inch) Super Retina XDR Display</li>
+            <li>12MP + 12MP | 12MP Front Camera</li>
+            <li>A15 Bionic Chip Processor</li>
+            <li>Operating System : iOS 14</li>
+            <li>4K Resolution</li>
+          </ul>
+          <p><button class="details">View Details</button></p>
+          <button class="add-to-cart">
+            <span class="fa fa-shopping-cart"></span>
+            Add to cart
+          </button>
+          <button class="buy">
+            <span class="fa fa-bag-shopping"></span>
+            Buy now
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://kit.fontawesome.com/89eed8ee64.js" crossorigin="anonymous"></script>
+  <script src="./script.js"></script>
+</body>
+</html>

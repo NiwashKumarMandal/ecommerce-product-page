@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1em;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffa41c;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  position: relative;
+  width: 100px;
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+}
+
+
+.nav-icon {
+  margin-left: 15px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s;
+}
+
+.nav-icon:hover {
+  color: #ffa41c;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+}
+
+.wrapper {
+  width: 90%;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.all-images {
+  height: 80vh;
+  display: flex;
+  gap: 20px;
+}
+
+.small-images {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.small-images img {
+  height: 15vh;
+  margin-bottom: 10px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.small-images img:hover {
+  opacity: 1;
+}
+
+.main-images {
+  height: 100%;
+}
+
+.main-images img {
+  height: 100%;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+.brand {
+  background-color: #008000;
+  width: fit-content;
+  color: #fff;
+  font-size: 15px;
+  padding: 2px 5px;
+}
+
+h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.review {
+  margin: 10px 0;
+  background-color: #008000;
+  display: inline-block;
+  color: #fff;
+  padding: 4px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.price {
+  color: rgb(29, 28, 28);
+  font-size: 26px;
+  font-weight: bold;
+  padding: 10px 10px 0 0;
+}
+
+.discount {
+  margin-right: 8px;
+  font-weight: 500;
+  color: red;
+}
+
+.colour {
+  margin-top: 10px;
+}
+
+input {
+  width: 30px;
+  border: 1px solid #ccc;
+  font-weight: bold;
+  text-align: center;
+}
+
+button {
+  width: 140px;
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  border: 0;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-right: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: #f7ca00;
+  transition: transform 0.3s ease-in-out;
+}
+
+button .fa {
+  margin-right: 10px;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.buy {
+  background-color: #ffa41c;
+}
+
+ul.details {
+  margin: 15px 15px;
+  max-height: 600px;
+}
+
+ul.details li {
+  margin-bottom: 3px;
+}
+
+ul.hidden {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease-in-out;
+}
+
+@media (max-width: 1200px) {
+  .wrapper {
+    flex-direction: column;
+    height: auto;
+    padding: 5% 0;
+  }
+  .text {
+    padding-top: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .all-images {
+    flex-direction: column;
+    height: auto;
+  }
+  .small-images {
+    flex-direction: row;
+    justify-content: space-evenly;
+    order: 1;
+  }
+  .small-images img {
+    height: 8vh;
+    opacity: 1;
+  }
+  .product-box {
+    width: 100%;
+  }
+  .main-images img {
+    width: 100%;
+  }
+  h2 {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-links,
+  .nav-right {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .navbar-container.responsive .nav-links,
+  .navbar-container.responsive .nav-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar-container.responsive .nav-links {
+    margin-top: 20px;
+  }
+
+  .navbar-container.responsive .nav-right {
+    margin-top: 10px;
+  }
+}
